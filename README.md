@@ -91,4 +91,8 @@ Database : tp_mvc25 adalah database yang di dalam nya terdapat dua tabel yaitu, 
    - User diarahkan kembali ke halaman daftar dosen.
 
 ### Dokumentasi  
+##### Dosen
 ![Tonton Video Demo](Dokumentasi/dosen.mp4)
+
+##### Penelitian
+
