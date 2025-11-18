@@ -1,6 +1,5 @@
 <?php
-
-// 1. Include koneksi dan data terkait
+// Include koneksi dan data terkait
 include_once("model/DB.php");
 include_once("connection.php");
 include_once("model/Lecturers.php");
@@ -8,11 +7,11 @@ include_once("model/Research.php"); // Tambahkan Model Research
 include_once("controller/LecturersController.php"); 
 include_once("controller/ResearchController.php"); // Tambahkan Controller Research
 
-// 2. Tentukan aksi (action)
+// Tentukan aksi (action)
 // Default action adalah 'lecturer' jika tidak ada parameter 'action' di URL
 $action = isset($_GET['action']) ? $_GET['action'] : 'lecturer'; 
 
-// 3. Atur Routing (Lalu lintas URL)
+// Atur Routing (Lalu lintas URL)
 
 if ($action == 'research') {
     // Controller untuk Research

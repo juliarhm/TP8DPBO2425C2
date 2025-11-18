@@ -1,5 +1,5 @@
 <?php
-// File ini mendefinisikan Class yang akan dipanggil oleh Controller
+
 class ResearchView {
 
     // Method yang dipanggil oleh Controller->index()
@@ -10,7 +10,7 @@ class ResearchView {
         include "view/Research/index.php"; 
     }
     
-    // Kamu bisa tambahkan method lain untuk view yang berbeda
+    // method untuk menampilkan form Add
     public function renderCreate($lecturers_data) {
         $data = $lecturers_data;
         include "view/Research/create.php";
