@@ -8,7 +8,7 @@ Database : tp_mvc25 adalah database yang di dalam nya terdapat dua tabel yaitu, 
 ![Diagram Relasi Database](Dokumentasi/TabelDatabase.png)
 
 #### Struktur Direktori
-[!gambar](Dokumentasi/strukturfolder.png)
+![gambar](Dokumentasi/strukturfolder.png)
 1. controller/ logika kontrol, mengatur alur data
 2. model/ logika interaksi dengan database
 3. view/ tampilan HTML/PHP
@@ -91,4 +91,4 @@ Database : tp_mvc25 adalah database yang di dalam nya terdapat dua tabel yaitu, 
    - User diarahkan kembali ke halaman daftar dosen.
 
 ### Dokumentasi  
-[![Tonton Video Demo](Dokumentasi/TabelDatabase.png)](Dokumentasi/hasilprojek.mp4)
+![Tonton Video Demo](Dokumentasi/hasilprojek.mp4)
