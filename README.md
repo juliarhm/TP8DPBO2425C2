@@ -5,7 +5,7 @@ Program ini berbasis PHP dengan arsitektur MVC(Model-View-Controller) yang mengi
 
 #### Desain Database
 Database : tp_mvc25 adalah database yang di dalam nya terdapat dua tabel yaitu, lecturers, dan penelitian. 
-[!gambar](Dokumentasi/TabelDatabase.png)
+![Diagram Relasi Database](Dokumentasi/TabelDatabase.png)
 
 #### Struktur Direktori
 [!gambar](Dokumentasi/strukturfolder.png)
@@ -31,64 +31,64 @@ Database : tp_mvc25 adalah database yang di dalam nya terdapat dua tabel yaitu, 
    - LecturerView merender (render($data)) daftar dosen ke halaman.
    
    Menambahkan Dosen
-   1. User mengklik tombol "Add New Lecturer"
-   2. LecturerController->add() di panggil.
-   3. LecturerView menampilkan form create.
-   4. User mengisi form dan mengirimkannya (submit).
-   5. LecturerController->add() memproses data formulir
-   6. Model Lecturers memanggil add($data) untuk menambhkan data baru ke database.
-   7. User diarahkan kembali ke halam daftar dosen.
+   - User mengklik tombol "Add New Lecturer"
+   - LecturerController->add() di panggil.
+   - LecturerView menampilkan form create.
+   - User mengisi form dan mengirimkannya (submit).
+   - LecturerController->add() memproses data formulir
+   - Model Lecturers memanggil add($data) untuk menambhkan data baru ke database.
+   - User diarahkan kembali ke halam daftar dosen.
 
    Mengedit Dosen
-   1. User mengkilk tombol "Edit" untuk dosen tertentu.
-   2. LecturerController->edit() di panggil.
-   3. Controller mengambil data dosen berdasrkan id dan LecturerView menampilkan form        edit yang sudah terisi dengan data yang sebelumnya.
-   4. User memperbarui form dan mengirimkannya (submit).
-   5. LecturerController->edit() memproses data form dan id.
-   6. Model Lecturers memanggil update($id, $data) untuk memperbarui data di database.
-   7. User di arahkan kembali ke halam dafatr dosen.
+   - User mengkilk tombol "Edit" untuk dosen tertentu.
+   - LecturerController->edit() di panggil.
+   - Controller mengambil data dosen berdasrkan id dan LecturerView menampilkan form        edit yang sudah terisi dengan data yang sebelumnya.
+   - User memperbarui form dan mengirimkannya (submit).
+   - LecturerController->edit() memproses data form dan id.
+   - Model Lecturers memanggil update($id, $data) untuk memperbarui data di database.
+   - User di arahkan kembali ke halam dafatr dosen.
 
    Menghapus Dosen
-   1. User mengklik tombol "Delete" untuk dosen.
-   2. LecturerController-delete() dipanggil, mengambil id.
-   3. Controller memanggil Model Lecturers (delete($id)) untuk mengahapus baris data         dari database.
-   4. User diarahkan kembali ke halaman daftar dosen.
+   - User mengklik tombol "Delete" untuk dosen.
+   - LecturerController-delete() dipanggil, mengambil id.
+   - Controller memanggil Model Lecturers (delete($id)) untuk mengahapus baris data         dari database.
+   - User diarahkan kembali ke halaman daftar dosen.
     
 3. Alur Manajemen Penelitian (Research)
    Melihat Daftar Penelitian
-   1. User mengakses halaman penelitian
-   2. ResearchController->indec() dipanggil.
-   3. Controller memanggil Model Research (getResearch()) dan Model           Lecturers(getLecturers()) untuk mengambil dan untuk di tampilkan.
-   4. Controller menggabungkan data
-   5. Researchviwe merender (render($data)) daftar penelitian (termasuk data dosen terkaitnya) ke halaman.
+   - User mengakses halaman penelitian
+   - ResearchController->indec() dipanggil.
+   - Controller memanggil Model Research (getResearch()) dan Model           Lecturers(getLecturers()) untuk mengambil dan untuk di tampilkan.
+   - Controller menggabungkan data
+   - Researchviwe merender (render($data)) daftar penelitian (termasuk data dosen terkaitnya) ke halaman.
   
    Menambahkan Penelitian
-   1. user mengklik tombol "Tambah penelitian"
-   2. ResearchController->add() di panggil
-   3. Controller memanggil Model Lectures (getLecturers()) untuk mengambil data semua dosen.
-   4. Controller mengirimkan data dosen tersebut ke researchView, agar form dapat menampilkan daftar pilihan dosen.
-   5. ResearchView menampilkan form
-   6. user mengisi form dan mengirimkannya
-   7. ResearchController->add() memproses data
-   8. Model Rosearch memanggil add($data) untuk menambahlan data penelitian yg baru ke database
-   9. User diarahkan kemabli ke halaman penelitian.
+   - user mengklik tombol "Tambah penelitian"
+   - ResearchController->add() di panggil
+   - Controller memanggil Model Lectures (getLecturers()) untuk mengambil data semua dosen.
+   - Controller mengirimkan data dosen tersebut ke researchView, agar form dapat menampilkan daftar pilihan dosen.
+   - ResearchView menampilkan form
+   - user mengisi form dan mengirimkannya
+   - ResearchController->add() memproses data
+   - Model Rosearch memanggil add($data) untuk menambahlan data penelitian yg baru ke database
+   - User diarahkan kemabli ke halaman penelitian.
   
    Mengedit Penelitian
-   1. User mengkilk tombol "Edit" untuk penelitian tertentu.
-   2. ResearchController->edit() di panggil.
-   3. Controller memanggil Model rsesearch (getResearchById($id)) untuk mengambil data penelitian lama. dan memanggil Model Lecturers (getlecturers()) untuk mengambil data semua dosen.
-   4. Controller menggabungkan kedua data dan megirimkan ke ResearchView.
-   5. ResearchView menampilkan form edit yang sudah terisi data penelitian lama. 
-   6. User memperbarui form dan mengirimkannya (submit).
-   7. ResearchController->edit() memproses data form dan id.
-   8. Model Research memanggil update($id, $data) untuk memperbarui data di database.
-   9. User di arahkan kembali ke halam dafatr penelitian.
+   - User mengkilk tombol "Edit" untuk penelitian tertentu.
+   - ResearchController->edit() di panggil.
+   - Controller memanggil Model rsesearch (getResearchById($id)) untuk mengambil data penelitian lama. dan memanggil Model Lecturers (getlecturers()) untuk mengambil data semua dosen.
+   - Controller menggabungkan kedua data dan megirimkan ke ResearchView.
+   - ResearchView menampilkan form edit yang sudah terisi data penelitian lama. 
+   - User memperbarui form dan mengirimkannya (submit).
+   - ResearchController->edit() memproses data form dan id.
+   - Model Research memanggil update($id, $data) untuk memperbarui data di database.
+   - User di arahkan kembali ke halam dafatr penelitian.
   
    Menghapus Penelitian
-   1. User mengklik tombol "Delete" untuk penelitian.
-   2. ResearchController-delete() dipanggil, mengambil id.
-   3. Controller memanggil Model Reseacrh (delete($id)) untuk mengahapus baris data         dari database.
-   4. User diarahkan kembali ke halaman daftar dosen.
+   - User mengklik tombol "Delete" untuk penelitian.
+   - ResearchController-delete() dipanggil, mengambil id.
+   - Controller memanggil Model Reseacrh (delete($id)) untuk mengahapus baris data         dari database.
+   - User diarahkan kembali ke halaman daftar dosen.
 
 ### Dokumentasi  
 [Tonton Video Demo Proyek di sini](Dokumentasi/hasilprojek.mp4)
