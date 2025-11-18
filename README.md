@@ -18,17 +18,17 @@ Database : tp_mvc25 adalah database yang di dalam nya terdapat dua tabel yaitu, 
  
 ### Alur Program
 1. Titik Masuk dan Inisialisasi
-   aplikasi ini dimulai dengan tiga titik masuk utama yang mengarahkan ke controller      yang berbeda-beda.
-   > index.php : halaman utama ( tetapi di program aku langsung ke tampilan dosen         tidak ada tampilan khusus Dashboardnya).
-   > index.php?action=lecturer : mengakses manajemen data Dosen.
-   > index.php?action=research : mengakses manajemen data penelitian.
+   aplikasi ini dimulai dengan tiga titik masuk utama yang mengarahkan ke controller yang berbeda-beda.
+   - index.php : halaman utama ( tetapi di program aku langsung ke tampilan dosen tidak ada tampilan khusus Dashboardnya).
+   - index.php?action=lecturer : mengakses manajemen data Dosen.
+   - index.php?action=research : mengakses manajemen data penelitian.
   
 2. Alur Dosen(Lecturers)
    Melihat Daftar Dosen
-   1. User mengakses halaman dosen
-   2. LecturerController->index() dipanggil.
-   3. Model Lecturers membuka koneksi dan memanggil getLecturers() untuk mengambil           semua data dosen dari database.
-   4. LecturerView merender (render($data)) daftar dosen ke halaman.
+   - User mengakses halaman dosen
+   - LecturerController->index() dipanggil.
+   - Model Lecturers membuka koneksi dan memanggil getLecturers() untuk mengambil           semua data dosen dari database.
+   - LecturerView merender (render($data)) daftar dosen ke halaman.
    
    Menambahkan Dosen
    1. User mengklik tombol "Add New Lecturer"
